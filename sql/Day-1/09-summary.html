@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 - Course Summary & Exercises</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 32px;
+            line-height: 1.6;
+            max-width: 850px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #007acc;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        code,
+        pre {
+            background: #282c34;
+            color: #abb2bf;
+            border-radius: 6px;
+            padding: 15px;
+            font-size: 0.95em;
+            display: block;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007acc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .exercise-box {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Menu</a>
+        <h1>📝 Course Summary & Exercises</h1>
+
+        <h2>Quick Cheat Sheet</h2>
+        <ul>
+            <li><code>CREATE DATABASE db_name;</code> - Create new DB</li>
+            <li><code>USE db_name;</code> - Select DB</li>
+            <li><code>CREATE TABLE table_name (...);</code> - Create Table</li>
+            <li><code>INSERT INTO table_name VALUES (...);</code> - Add Data</li>
+            <li><code>UPDATE table_name SET ... WHERE ...;</code> - Modify Data</li>
+            <li><code>DELETE FROM table_name WHERE ...;</code> - Remove Data</li>
+            <li><code>TRUNCATE TABLE table_name;</code> - WIPE ALL DATA</li>
+        </ul>
+
+        <div class="exercise-box">
+            <h2>🎯 Practice Exercises</h2>
+
+            <h3>Exercise 1: Store Management</h3>
+            <ol>
+                <li>Create a database named <code>shop_db</code>.</li>
+                <li>Create a table <code>products</code> with: <code>id</code> (AI/PK), <code>name</code> (VARCHAR),
+                    <code>price</code> (DECIMAL), and <code>stock</code> (INT).</li>
+                <li>Bulk insert 5 products.</li>
+                <li>Update the price of the first product.</li>
+                <li>Delete any product with 0 stock.</li>
+            </ol>
+
+            <h3>Exercise 2: Employee Records</h3>
+            <ol>
+                <li>Create an <code>employees</code> table.</li>
+                <li>Add a column for <code>department</code> using <code>ALTER TABLE</code>.</li>
+                <li>Insert 3 employees.</li>
+                <li>Try <code>TRUNCATE</code> to see the ID reset to 1.</li>
+            </ol>
+        </div>
+
+        <p style="text-align: center; margin-top: 40px; color: #7f8c8d;">
+            Congratulations! You have completed SQL Day 1 Fundamentals. 🎉
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Database Operations</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 32px;
+            line-height: 1.6;
+            max-width: 850px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #007acc;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        code,
+        pre {
+            background: #282c34;
+            color: #abb2bf;
+            border-radius: 6px;
+            padding: 15px;
+            font-size: 0.95em;
+            display: block;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007acc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: #e8f4fd;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .warning {
+            background-color: #ffebee;
+            border-left: 5px solid #f44336;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Menu</a>
+        <h1>🛠️ Part 2: Database Operations</h1>
+
+        <p>Before creating tables, we need to create and select a "Library" (Database) to work in.</p>
+
+        <h2>1. CREATE DATABASE</h2>
+        <p>Creates a new empty database container.</p>
+        <pre><code>CREATE DATABASE school_db;</code></pre>
+
+        <h2>2. USE DATABASE</h2>
+        <p>Selects which database you want to work with. You MUST do this before creating tables.</p>
+        <pre><code>USE school_db;</code></pre>
+
+        <h2>3. DROP DATABASE</h2>
+        <p>Deletes the entire database and everything inside it.</p>
+        <div class="warning">
+            ⚠️ <strong>Danger:</strong> This deletes ALL data permanently and cannot be undone!
+        </div>
+        <pre><code>DROP DATABASE school_db;
+
+-- Safe way to drop
+DROP DATABASE IF EXISTS school_db;</code></pre>
+
+        <div class="highlight">
+            <strong>Typical Workflow:</strong>
+            <ol>
+                <li>Create Database</li>
+                <li>Use Database</li>
+                <li>Create Tables (Next Topic)</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

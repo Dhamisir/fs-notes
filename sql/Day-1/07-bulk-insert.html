@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - Bulk Insert</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 32px;
+            line-height: 1.6;
+            max-width: 850px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #007acc;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        code,
+        pre {
+            background: #282c34;
+            color: #abb2bf;
+            border-radius: 6px;
+            padding: 15px;
+            font-size: 0.95em;
+            display: block;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007acc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Menu</a>
+        <h1>⚡ Part 7: Bulk Insert</h1>
+
+        <p>Inserting many rows one-by-one is slow. Bulk insertion is much more efficient.</p>
+
+        <h2>1. Multiple Values Syntax</h2>
+        <pre><code>INSERT INTO students (name, age, email)
+VALUES 
+    ('Student 1', 18, 's1@email.com'),
+    ('Student 2', 19, 's2@email.com'),
+    ('Student 3', 20, 's3@email.com');</code></pre>
+
+        <h2>2. Programmatic Bulk Insert (Node.js)</h2>
+        <p>If you are using the <code>mysql2</code> library in Node.js, you can pass an array of arrays:</p>
+        <pre><code>const studentsData = [
+  ['Alice', 20, 'alice@email.com'],
+  ['Bob', 19, 'bob@email.com'],
+  ['Charlie', 21, 'charlie@email.com']
+];
+
+const query = 'INSERT INTO students (name, age, email) VALUES ?';
+db.query(query, [studentsData]);</code></pre>
+
+        <div class="highlight">
+            <strong>Why use Bulk Insert?</strong>
+            <ul>
+                <li><strong>Speed:</strong> One request vs many small requests.</li>
+                <li><strong>Performance:</strong> Less strain on the database server.</li>
+                <li><strong>Network:</strong> Less data traffic between app and DB.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
