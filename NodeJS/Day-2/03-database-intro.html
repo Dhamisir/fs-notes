@@ -135,31 +135,36 @@
             <p>In Node.js, we use drivers like <code>mysql2</code> to communicate with our SQL database.</p>
             <pre><code>const mysql = require('mysql2');
 
-// Create connection
-const connection = mysql.createConnection({
+// 1. Create a connection pool
+const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: 'password',
-  database: 'my_app'
+  database: 'my_app',
+  connectionLimit: 10
 });
 
-connection.connect((err) => {
-  if (err) throw err;
-  console.log("Connected to MySQL Database!");
-});</code></pre>
+// 2. Use the Promise-based version (important for async/await)
+const db = pool.promise();
+
+console.log("MySQL Connection Pool Created with Promises");</code></pre>
         </div>
 
         <div class="mini-section">
             <h2>3. Running Queries in Controllers</h2>
             <p>We use SQL queries to fetch and store data.</p>
             <pre><code>// user.controller.js
-exports.getAllUsers = (req, res) => {
-  const query = "SELECT * FROM users";
-  
-  db.query(query, (err, results) => {
-    if (err) return res.status(500).send(err);
+exports.getAllUsers = async (req, res) => {
+  try {
+    const query = "SELECT * FROM users";
+    
+    // We can use await instead of callbacks!
+    const [results] = await db.query(query);
+    
     res.json(results);
-  });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };</code></pre>
         </div>
 
@@ -169,7 +174,8 @@ exports.getAllUsers = (req, res) => {
                 <li>Download and install <strong>MySQL Workbench</strong> or <strong>XAMPP</strong>.</li>
                 <li>Create a database named <code>test_db</code>.</li>
                 <li>Write down a SQL command to create a <code>users</code> table with <code>id</code>,
-                    <code>name</code>, and <code>email</code>.</li>
+                    <code>name</code>, and <code>email</code>.
+                </li>
             </ol>
         </div>
     </div>
