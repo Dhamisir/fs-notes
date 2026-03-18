@@ -25,5 +25,15 @@ export const jsDays = [
       { slug: "assignment", title: "Day 2 Assignments" },
     ],
   },
+  {
+    slug: "day-3",
+    title: "Day 3 – DOM Deep Dive",
+    description:
+      "Learn how the DOM works, select & change elements, handle events, and build UI by creating/removing nodes.",
+    lessons: [
+      { slug: "dom", title: "DOM (Document Object Model)" },
+      { slug: "assignment", title: "Day 3 Assignment (DOM Projects)" },
+    ],
+  },
 ];
 
