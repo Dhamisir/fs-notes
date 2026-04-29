@@ -92,6 +92,17 @@ export default function Home() {
             </div>
             <div className="mt-3 text-sm text-muted-foreground">Open →</div>
           </Link>
+
+          <Link
+            href="/interview"
+            className="rounded-xl border bg-card p-5 text-card-foreground shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          >
+            <div className="text-lg font-semibold tracking-tight">Interview</div>
+            <div className="mt-1 text-sm text-muted-foreground">
+              Preparation notes and questions
+            </div>
+            <div className="mt-3 text-sm text-muted-foreground">Open →</div>
+          </Link>
         </div>
       </main>
     </div>
