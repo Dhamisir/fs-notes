@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F7F3EE"/>
+  <rect width="1200" height="320" fill="#243746"/>
+  <path d="M0 320L1200 240V320H0Z" fill="#36566A"/>
+  <circle cx="980" cy="115" r="58" fill="#F3C76B"/>
+  <text x="80" y="115" fill="white" font-family="Georgia, serif" font-size="58" font-weight="700">Villa Resort Layout</text>
+  <text x="84" y="165" fill="#F8DAD0" font-family="Arial, sans-serif" font-size="28">HTML + CSS responsive interview assignment</text>
+  <rect x="80" y="390" width="220" height="250" rx="24" fill="white" stroke="#E0D9D2" stroke-width="4"/>
+  <rect x="350" y="390" width="220" height="250" rx="24" fill="#D9B08C" stroke="#E0D9D2" stroke-width="4"/>
+  <rect x="620" y="390" width="220" height="250" rx="24" fill="white" stroke="#E0D9D2" stroke-width="4"/>
+  <rect x="890" y="390" width="220" height="250" rx="24" fill="#B9C6AE" stroke="#E0D9D2" stroke-width="4"/>
+  <text x="127" y="475" fill="#243746" font-family="Arial, sans-serif" font-size="30" font-weight="700">Navbar</text>
+  <text x="390" y="475" fill="#243746" font-family="Arial, sans-serif" font-size="30" font-weight="700">Grid Work</text>
+  <text x="663" y="475" fill="#243746" font-family="Arial, sans-serif" font-size="30" font-weight="700">Flex Rooms</text>
+  <text x="954" y="475" fill="#243746" font-family="Arial, sans-serif" font-size="30" font-weight="700">Tags</text>
+  <text x="80" y="725" fill="#6B5C52" font-family="Arial, sans-serif" font-size="26">Build sections with the required CSS methods. Do not use layout screenshots.</text>
+</svg>
