@@ -1,92 +1,142 @@
-import Image from "next/image";
-import Link from "next/link";
-import interviewAssignment from "../../../utils/interview/villa-resort-layout";
+"use client";
 
-export const metadata = { title: "Interview" };
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { RefreshCw } from "lucide-react";
+import { fetchMocks } from "@/utils/api";
+
+function getInterviewId(url) {
+  if (!url || typeof url !== "string") return "";
+  const trimmedUrl = url.trim().replace(/\/+$/, "");
+  const parts = trimmedUrl.split("/");
+  return parts[parts.length - 1] ?? "";
+}
 
 export default function InterviewPage() {
-  const assignments = [interviewAssignment];
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  async function loadMocks(forceRefresh = false) {
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const data = await fetchMocks(
+        forceRefresh ? { refreshKey: Date.now() } : {},
+      );
+      setItems(Array.isArray(data) ? data : []);
+    } catch (err) {
+      setError(err?.message || "Failed to load mocks");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    let isMounted = true;
+    if (isMounted) loadMocks();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-8 px-6 py-12">
+    <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
       <Link
         href="/"
-        className="text-sm text-muted-foreground hover:text-foreground"
+        className="mb-4 inline-flex w-fit text-sm text-muted-foreground hover:text-foreground sm:mb-5"
       >
-        ← Home
+        ← Back
       </Link>
 
-      <section className="rounded-3xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 px-6 py-10 text-white shadow-sm sm:px-10">
-        <p className="text-sm font-medium uppercase tracking-[0.3em] text-pink-300">
-          Interview
-        </p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight">
-          Mock assignments
-        </h1>
-        <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-200">
-          Practice HTML, CSS, and JavaScript interview assignments with clear
-          requirements, layout notes, and submission rubrics.
-        </p>
-      </section>
-
-      <section className="grid gap-4 md:grid-cols-3">
-        {["HTML", "CSS", "JavaScript"].map((skill) => (
-          <div
-            key={skill}
-            className="rounded-2xl border bg-card p-5 text-card-foreground shadow-sm"
+      <div className="mb-6 flex flex-col gap-2 sm:mb-8">
+        <div className="flex items-center justify-between gap-3">
+          <h1 className="text-2xl font-semibold tracking-tight text-[#2c3e50] sm:text-3xl">
+            Interview Mocks
+          </h1>
+          <button
+            type="button"
+            onClick={() => loadMocks(true)}
+            disabled={isLoading}
+            className="inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm text-muted-foreground transition hover:text-foreground disabled:cursor-not-allowed disabled:opacity-60"
+            aria-label="Refresh interview mocks"
+            title="Refresh interview mocks"
           >
-            <div className="text-lg font-semibold">{skill}</div>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Mock assignment practice for layout, responsiveness, and clean
-              code review.
-            </p>
-          </div>
-        ))}
-      </section>
-
-      <section className="grid gap-5">
-        {assignments.map((assignment) => (
-          <Link
-            key={assignment.id}
-            href={`/interview/${assignment.id}`}
-            className="grid overflow-hidden rounded-2xl border bg-white text-[#1f2937] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md md:grid-cols-[280px_1fr]"
-          >
-            <Image
-              src={assignment.image}
-              alt={assignment.title}
-              width={1200}
-              height={800}
-              className="h-full min-h-56 w-full object-cover"
+            <RefreshCw
+              className={`h-4 w-4 ${isLoading ? "animate-spin" : ""}`}
+              aria-hidden="true"
             />
-            <div className="flex flex-col gap-4 p-6">
-              <div>
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-pink-500">
-                  {assignment.category}
-                </p>
-                <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-                  {assignment.title}
-                </h2>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  {assignment.summary}
-                </p>
-              </div>
+            Refresh
+          </button>
+        </div>
+        <p className="max-w-2xl text-sm text-muted-foreground sm:text-base">
+          Choose a mock to open the interview page.
+        </p>
+      </div>
 
-              <div className="flex flex-wrap gap-2">
-                {assignment.stack.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+      {isLoading ? (
+        <div className="rounded-xl border bg-card p-5 text-sm text-muted-foreground shadow-sm">
+          Loading mocks...
+        </div>
+      ) : null}
 
-              <div className="text-sm font-medium text-[#0174af]">Open →</div>
-            </div>
-          </Link>
-        ))}
-      </section>
-    </main>
+      {error ? (
+        <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+          {error}
+        </div>
+      ) : null}
+
+      {!isLoading && !error ? (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((item, index) => {
+            const id = getInterviewId(item?.url);
+            const title = item?.name?.trim() || `Mock ${index + 1}`;
+            const description = item?.description?.trim();
+            const categories = Array.isArray(item?.category) ? item.category : [];
+            if (!id) return null;
+
+            return (
+              <Link
+                key={`${id}-${index}`}
+                href={`/interview/${id}`}
+                className="group flex min-h-[132px] flex-col justify-between rounded-xl border bg-card p-5 text-card-foreground shadow-sm transition duration-150 hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="pr-2 text-base font-semibold tracking-tight sm:text-lg">
+                  {title}
+                </div>
+                {description ? (
+                  <div className="mt-2 line-clamp-2 text-sm text-muted-foreground">
+                    {description}
+                  </div>
+                ) : null}
+                {categories.length > 0 ? (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {categories.map((cat) => (
+                      <span
+                        key={`${id}-${cat}`}
+                        className="rounded-full border px-2.5 py-1 text-xs capitalize text-muted-foreground"
+                      >
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+                <div className="mt-4 text-sm text-muted-foreground transition group-hover:text-foreground">
+                  Open interview →
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      ) : null}
+
+      {!isLoading && !error && items.length === 0 ? (
+        <div className="rounded-xl border bg-card p-5 text-sm text-muted-foreground shadow-sm">
+          No mocks found.
+        </div>
+      ) : null}
+    </div>
   );
 }
