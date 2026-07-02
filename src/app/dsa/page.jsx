@@ -15,12 +15,15 @@ const weightage = [
 ];
 
 const modules = [
-  "Arrays + Hashing (Amazon-heavy)",
-  "Binary Search (Google-style thinking)",
-  "Trees & Graphs (Meta-heavy)",
-  "Heap + Greedy",
-  "DP + Backtracking",
-  "Advanced (Graph + Stack + Bit)",
+  {
+    title: "Arrays + Hashing (Amazon-heavy)",
+    href: "/dsa/module1",
+  },
+  { title: "Binary Search (Google-style thinking)" },
+  { title: "Trees & Graphs (Meta-heavy)" },
+  { title: "Heap + Greedy" },
+  { title: "DP + Backtracking" },
+  { title: "Advanced (Graph + Stack + Bit)" },
 ];
 
 const interviewPatterns = [
@@ -189,22 +192,47 @@ export default function DsaPage() {
             📊 Final Course Structure
           </h2>
           <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            {modules.map((module, index) => (
-              <div
-                key={module}
-                className="rounded-2xl border bg-white p-4 shadow-sm"
-              >
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-100 text-sm font-bold text-cyan-700">
-                  {index + 1}
+            {modules.map((module, index) => {
+              const className = [
+                "rounded-2xl border bg-white p-4 shadow-sm",
+                module.href
+                  ? "transition hover:-translate-y-0.5 hover:shadow-md"
+                  : "",
+              ].join(" ");
+
+              const content = (
+                <>
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-100 text-sm font-bold text-cyan-700">
+                    {index + 1}
+                  </div>
+                  <div className="mt-3 font-semibold text-slate-800">
+                    Module {index + 1}
+                  </div>
+                  <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                    {module.title}
+                  </p>
+                  {module.href ? (
+                    <p className="mt-2 text-sm font-medium text-cyan-700">
+                      Open roadmap →
+                    </p>
+                  ) : null}
+                </>
+              );
+
+              if (module.href) {
+                return (
+                  <Link key={module.title} href={module.href} className={className}>
+                    {content}
+                  </Link>
+                );
+              }
+
+              return (
+                <div key={module.title} className={className}>
+                  {content}
                 </div>
-                <div className="mt-3 font-semibold text-slate-800">
-                  Module {index + 1}
-                </div>
-                <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                  {module}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
