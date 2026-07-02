@@ -300,7 +300,7 @@ export const topicContentBySlug = {
       {
         label: "1D Array Traversal Practice",
         description: "Guided problems on linear array traversal",
-        url: "https://elite-amusement-fee.notion.site/Module-1-Array-Traversal-38d4291ef87c808bb143dc1a35be5002",
+        url: "https://elite-amusement-fee.notion.site/Module-1-Array-Traversal-3914291ef87c8061824cdb1d9f28052f",
       },
       {
         label: "2D Matrix Traversal Practice",
