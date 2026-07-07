@@ -156,7 +156,7 @@ export function DsaTopicModal({ topic, onClose }) {
               <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
                 Practice Modules
               </p>
-              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {content.links.map((link) => (
                   <a
                     key={link.url}

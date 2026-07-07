@@ -298,14 +298,34 @@ export const topicContentBySlug = {
   "practice-session": {
     links: [
       {
-        label: "1D Array Traversal Practice",
-        description: "Guided problems on linear array traversal",
-        url: "https://elite-amusement-fee.notion.site/Module-1-Array-Traversal-3914291ef87c8061824cdb1d9f28052f",
+        label: "Array Traversal",
+        description: "Linear array traversal and foundational loop practice",
+        url: "https://anshu-fs-notes.notion.site/Module-1-Array-Traversal-3914291ef87c8061824cdb1d9f28052f",
       },
       {
-        label: "2D Matrix Traversal Practice",
-        description: "Guided problems on row/column matrix traversal",
-        url: "https://elite-amusement-fee.notion.site/Module-1-2D-Array-Traversal-38d4291ef87c808bb143dc1a35be5002",
+        label: "2D Array Traversal",
+        description: "Row/column matrix traversal with nested loops",
+        url: "https://anshu-fs-notes.notion.site/Module-1-2D-Array-Traversal-38d4291ef87c808bb143dc1a35be5002",
+      },
+      {
+        label: "Searching",
+        description: "Linear search and basic search patterns on arrays",
+        url: "https://anshu-fs-notes.notion.site/Module-1-Searching-Part-1-3964291ef87c80d78abee8cae86a7672",
+      },
+      {
+        label: "Array Manipulation",
+        description: "Reverse, rotate, shift, and modify array elements",
+        url: "https://anshu-fs-notes.notion.site/Module-1-Array-Manipulation-Part-1-3964291ef87c802ba551de4c37ffac87",
+      },
+      {
+        label: "Frequency (Brute Force)",
+        description: "Count occurrences using nested loops before hashing",
+        url: "https://anshu-fs-notes.notion.site/Module-1-Frequency-Brute-Force-Part-1-3964291ef87c8014b484dfcad3041103",
+      },
+      {
+        label: "Hashing",
+        description: "Object, Map, and Set for frequency and lookup",
+        url: "https://anshu-fs-notes.notion.site/Module-1-Hashing-Object-Map-Set-Part-1-3964291ef87c80c1ae2dc39610e80075",
       },
     ],
     sections: [
