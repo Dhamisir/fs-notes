@@ -433,6 +433,132 @@ export const topicContentBySlug = {
       },
     ],
   },
+  "phase-1-nested-loop-thinking": {
+    sections: [
+      {
+        title: "A – Pair Problems",
+        bullets: [
+          "Two Sum",
+          "Count Pairs with Given Sum",
+          "Count Pairs with Difference K",
+          "Find Pair with Maximum Sum",
+          "Print All Pairs",
+          "Pair Closest to Target",
+          "Pair with Minimum Difference",
+          "Pair Product = X",
+          "Pair with Same Value",
+          "Pair with Largest Product",
+        ],
+      },
+      {
+        title: "B – Frequency Problems",
+        bullets: [
+          "Contains Duplicate",
+          "Frequency of Every Element",
+          "Highest Frequency",
+          "Lowest Frequency",
+          "First Unique",
+          "First Duplicate",
+          "Count Distinct",
+          "Majority Element (Brute Force)",
+          "Missing Number (Brute Force)",
+          "Find Lonely Number",
+        ],
+      },
+      {
+        title: "C – Subarray Problems",
+        bullets: [
+          "Sum of Every Subarray",
+          "Maximum Subarray Sum (Brute Force)",
+          "Minimum Subarray Sum",
+          "Count Subarrays",
+          "Print Every Subarray",
+          "Largest Even Sum Subarray",
+          "Largest Odd Sum Subarray",
+          "Count Subarrays with Sum K",
+          "Longest Subarray",
+          "Shortest Subarray",
+        ],
+      },
+      {
+        title: "D – Array Manipulation",
+        bullets: [
+          "Move Zeroes",
+          "Remove Duplicates",
+          "Merge Two Arrays",
+          "Rotate Array",
+          "Reverse Array",
+          "Rearrange Positive & Negative",
+          "Rearrange Even & Odd",
+          "Sort 0s and 1s (Brute Force)",
+          "Sort 0s, 1s and 2s (Brute Force)",
+          "Replace Every Element with Greatest on Right",
+        ],
+      },
+    ],
+  },
+  "phase-2-optimization": {
+    sections: [
+      {
+        title: "Pattern 1 – Hashing",
+        body: "Solve again:",
+        bullets: [
+          "Two Sum",
+          "Contains Duplicate",
+          "Frequency",
+          "Majority Element",
+          "Missing Number",
+          "Longest Consecutive Sequence",
+        ],
+      },
+      {
+        title: "Pattern 2 – Two Pointer",
+        body: "Now teach:",
+        bullets: [
+          "Move Zeroes",
+          "Remove Duplicates",
+          "Reverse Array",
+          "Reverse String",
+          "Merge Sorted Arrays",
+          "Container With Most Water",
+          "Two Sum II",
+        ],
+      },
+      {
+        title: "Pattern 3 – Sliding Window",
+        body: "Now teach:",
+        bullets: [
+          "Maximum Sum Subarray",
+          "Maximum Average",
+          "Longest Substring",
+          "Fruits Into Basket",
+          "Minimum Window",
+        ],
+      },
+      {
+        title: "Pattern 4 – Prefix Sum",
+        body: "Now teach:",
+        bullets: [
+          "Running Sum",
+          "Range Sum Query",
+          "Pivot Index",
+          "Subarray Sum Equals K",
+        ],
+      },
+      {
+        title: "Pattern 5 – Binary Search",
+        body: "Finally:",
+        bullets: [
+          "Binary Search",
+          "First Position",
+          "Last Position",
+          "Search Insert Position",
+          "Rotated Array",
+          "Peak Element",
+        ],
+      },
+    ],
+  },
   "two-pointer-basics": {
     sections: [
       {

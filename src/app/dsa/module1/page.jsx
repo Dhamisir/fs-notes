@@ -48,7 +48,7 @@ export default function DsaModule1Page() {
             {section.title}
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">{section.subtitle}</p>
-          <DsaTopicTable topics={section.topics} />
+          <DsaTopicTable topics={section.topics} layout={section.layout} />
         </section>
       ))}
     </div>
