@@ -611,6 +611,86 @@ export const topicContentBySlug = {
       },
     ],
   },
+  "phase-3-sorting-algorithms": {
+    sections: [
+      {
+        title: "A – Basic Sorting (Easy)",
+        body: "These help students understand swapping, comparisons, and nested loops.",
+        bullets: [
+          "Bubble Sort ⭐",
+          "Selection Sort ⭐",
+          "Insertion Sort ⭐",
+        ],
+      },
+      {
+        title: "Students learn",
+        bullets: [
+          "Swapping",
+          "Comparisons",
+          "Best/Worst Case",
+          "Stable vs Unstable (later)",
+        ],
+      },
+      {
+        title: "B – Efficient Sorting (Medium)",
+        body: "These are the algorithms used more often in interviews and libraries.",
+        bullets: [
+          "Merge Sort ⭐⭐",
+          "Quick Sort ⭐⭐⭐",
+          "Heap Sort ⭐⭐⭐",
+        ],
+      },
+      {
+        title: "Students learn",
+        bullets: [
+          "Divide and Conquer",
+          "Recursion",
+          "Partitioning",
+          "Heap",
+        ],
+      },
+      {
+        title: "C – Non-Comparison Sorting (Advanced)",
+        body: "Teach these after arrays and hashing.",
+        bullets: [
+          "Counting Sort",
+          "Radix Sort",
+          "Bucket Sort",
+        ],
+      },
+      {
+        title: "Sorting Learning Order",
+        bullets: [
+          "Bubble Sort",
+          "Selection Sort",
+          "Insertion Sort",
+          "Merge Sort",
+          "Quick Sort",
+          "Heap Sort",
+          "Counting Sort",
+          "Radix Sort",
+          "Bucket Sort",
+        ],
+      },
+      {
+        title: "Interview Importance",
+        table: {
+          headers: ["Algorithm", "Interview Frequency"],
+          rows: [
+            ["Bubble Sort", "⭐⭐"],
+            ["Selection Sort", "⭐"],
+            ["Insertion Sort", "⭐⭐"],
+            ["Merge Sort", "⭐⭐⭐⭐⭐"],
+            ["Quick Sort", "⭐⭐⭐⭐⭐"],
+            ["Heap Sort", "⭐⭐⭐"],
+            ["Counting Sort", "⭐⭐"],
+            ["Radix Sort", "⭐"],
+            ["Bucket Sort", "⭐"],
+          ],
+        },
+      },
+    ],
+  },
   "two-pointer-basics": {
     sections: [
       {
