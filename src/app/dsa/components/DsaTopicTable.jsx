@@ -12,7 +12,7 @@ export function DsaTopicTable({ topics, layout = "table" }) {
         <p className="mt-3 text-xs text-muted-foreground">
           Click any phase card to open question notes
         </p>
-        <div className="mt-3 grid gap-4 md:grid-cols-2">
+        <div className="mt-3 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {topics.map((topic, index) => (
             <button
               key={topic.slug}

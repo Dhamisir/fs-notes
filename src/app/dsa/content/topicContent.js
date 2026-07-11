@@ -437,6 +437,12 @@ export const topicContentBySlug = {
     sections: [
       {
         title: "A – Pair Problems",
+        links: [
+          {
+            label: "Open A notes",
+            url: "https://anshu-fs-notes.notion.site/Phase-1-Module-A-Pair-Problems-39a4291ef87c8034be84db901d421290?pvs=74",
+          },
+        ],
         bullets: [
           "Two Sum",
           "Count Pairs with Given Sum",
@@ -452,6 +458,12 @@ export const topicContentBySlug = {
       },
       {
         title: "B – Frequency Problems",
+        links: [
+          {
+            label: "Open B notes",
+            url: "https://anshu-fs-notes.notion.site/Phase-1-Module-B-Frequency-Problems-39a4291ef87c8073a21cf001d1dd236f?pvs=73",
+          },
+        ],
         bullets: [
           "Contains Duplicate",
           "Frequency of Every Element",
@@ -467,6 +479,16 @@ export const topicContentBySlug = {
       },
       {
         title: "C – Subarray Problems",
+        links: [
+          {
+            label: "Subarray intro",
+            url: "https://anshu-fs-notes.notion.site/Introduction-to-Subarray-Subsequence-Substring-39a4291ef87c80288f78d3e34de0245a?pvs=73",
+          },
+          {
+            label: "Open C notes",
+            url: "https://anshu-fs-notes.notion.site/Phase-1-Module-C-Subarray-Problems-39a4291ef87c80a7a18bde4e7fc02723?pvs=73",
+          },
+        ],
         bullets: [
           "Sum of Every Subarray",
           "Maximum Subarray Sum (Brute Force)",
@@ -482,6 +504,12 @@ export const topicContentBySlug = {
       },
       {
         title: "D – Array Manipulation",
+        links: [
+          {
+            label: "Open D notes",
+            url: "https://anshu-fs-notes.notion.site/Phase-1-Module-D-Array-Manipulation-39a4291ef87c80acbcb8fd8aa65791b6?pvs=73",
+          },
+        ],
         bullets: [
           "Move Zeroes",
           "Remove Duplicates",
@@ -501,6 +529,12 @@ export const topicContentBySlug = {
     sections: [
       {
         title: "Pattern 1 – Hashing",
+        links: [
+          {
+            label: "Open hashing notes",
+            url: "https://anshu-fs-notes.notion.site/Phase-2-Pattern-1-Fast-Lookup-Hashing-39a4291ef87c800b9357e0d3117f049f?pvs=73",
+          },
+        ],
         body: "Solve again:",
         bullets: [
           "Two Sum",
@@ -513,6 +547,12 @@ export const topicContentBySlug = {
       },
       {
         title: "Pattern 2 – Two Pointer",
+        links: [
+          {
+            label: "Open two pointer notes",
+            url: "https://anshu-fs-notes.notion.site/Phase-2-Pattern-2-Two-Pointer-39a4291ef87c805c8c35f5df5843434f?pvs=73",
+          },
+        ],
         body: "Now teach:",
         bullets: [
           "Move Zeroes",
@@ -526,6 +566,12 @@ export const topicContentBySlug = {
       },
       {
         title: "Pattern 3 – Sliding Window",
+        links: [
+          {
+            label: "Open sliding window notes",
+            url: "https://anshu-fs-notes.notion.site/Phase-2-Pattern-3-Sliding-Window-39a4291ef87c802793c7e55a5c397e1e?pvs=73",
+          },
+        ],
         body: "Now teach:",
         bullets: [
           "Maximum Sum Subarray",
@@ -537,6 +583,12 @@ export const topicContentBySlug = {
       },
       {
         title: "Pattern 4 – Prefix Sum",
+        links: [
+          {
+            label: "Open prefix sum notes",
+            url: "https://anshu-fs-notes.notion.site/Phase-2-Pattern-4-Prefix-Sum-39a4291ef87c802289bce41a70f573c4?pvs=73",
+          },
+        ],
         body: "Now teach:",
         bullets: [
           "Running Sum",
@@ -547,6 +599,12 @@ export const topicContentBySlug = {
       },
       {
         title: "Pattern 5 – Binary Search",
+        links: [
+          {
+            label: "Open binary search notes",
+            url: "https://anshu-fs-notes.notion.site/Phase-2-Pattern-5-Binary-Search-39a4291ef87c80f482d4dd3999b3e582",
+          },
+        ],
         body: "Finally:",
         bullets: [
           "Binary Search",
@@ -556,6 +614,86 @@ export const topicContentBySlug = {
           "Rotated Array",
           "Peak Element",
         ],
+      },
+    ],
+  },
+  "phase-3-sorting-algorithms": {
+    sections: [
+      {
+        title: "A – Basic Sorting (Easy)",
+        body: "These help students understand swapping, comparisons, and nested loops.",
+        bullets: [
+          "Bubble Sort ⭐",
+          "Selection Sort ⭐",
+          "Insertion Sort ⭐",
+        ],
+      },
+      {
+        title: "Students learn",
+        bullets: [
+          "Swapping",
+          "Comparisons",
+          "Best/Worst Case",
+          "Stable vs Unstable (later)",
+        ],
+      },
+      {
+        title: "B – Efficient Sorting (Medium)",
+        body: "These are the algorithms used more often in interviews and libraries.",
+        bullets: [
+          "Merge Sort ⭐⭐",
+          "Quick Sort ⭐⭐⭐",
+          "Heap Sort ⭐⭐⭐",
+        ],
+      },
+      {
+        title: "Students learn",
+        bullets: [
+          "Divide and Conquer",
+          "Recursion",
+          "Partitioning",
+          "Heap",
+        ],
+      },
+      {
+        title: "C – Non-Comparison Sorting (Advanced)",
+        body: "Teach these after arrays and hashing.",
+        bullets: [
+          "Counting Sort",
+          "Radix Sort",
+          "Bucket Sort",
+        ],
+      },
+      {
+        title: "Sorting Learning Order",
+        bullets: [
+          "Bubble Sort",
+          "Selection Sort",
+          "Insertion Sort",
+          "Merge Sort",
+          "Quick Sort",
+          "Heap Sort",
+          "Counting Sort",
+          "Radix Sort",
+          "Bucket Sort",
+        ],
+      },
+      {
+        title: "Interview Importance",
+        table: {
+          headers: ["Algorithm", "Interview Frequency"],
+          rows: [
+            ["Bubble Sort", "⭐⭐"],
+            ["Selection Sort", "⭐"],
+            ["Insertion Sort", "⭐⭐"],
+            ["Merge Sort", "⭐⭐⭐⭐⭐"],
+            ["Quick Sort", "⭐⭐⭐⭐⭐"],
+            ["Heap Sort", "⭐⭐⭐"],
+            ["Counting Sort", "⭐⭐"],
+            ["Radix Sort", "⭐"],
+            ["Bucket Sort", "⭐"],
+          ],
+        },
       },
     ],
   },

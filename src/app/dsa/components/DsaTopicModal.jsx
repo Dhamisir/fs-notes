@@ -9,6 +9,21 @@ function SectionContent({ section }) {
   return (
     <div className="flex flex-col gap-3">
       <h3 className="text-base font-semibold text-slate-900">{section.title}</h3>
+      {section.links?.length ? (
+        <div className="flex flex-wrap gap-2">
+          {section.links.map((link) => (
+            <a
+              key={link.url}
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-fit rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-700 transition hover:border-cyan-300 hover:bg-cyan-100"
+            >
+              {link.label ?? "Open notes"} →
+            </a>
+          ))}
+        </div>
+      ) : null}
       {section.quote ? (
         <blockquote className="border-l-4 border-cyan-500 bg-cyan-50 px-4 py-2 text-sm italic text-slate-700">
           {section.quote}

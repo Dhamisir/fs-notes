@@ -105,6 +105,13 @@ export const module1Sections = [
         problems: "Pattern 1–5 question groups",
         goal: "Convert brute-force solutions into efficient patterns",
       },
+      {
+        slug: "phase-3-sorting-algorithms",
+        topic: "📘 Phase 3 – Sorting Algorithms",
+        concepts: "Basic, efficient, and non-comparison sorting algorithms with interview importance.",
+        problems: "Bubble, selection, insertion, merge, quick, heap, counting, radix, bucket",
+        goal: "Understand sorting tradeoffs and interview priority",
+      },
     ],
   },
 ];
