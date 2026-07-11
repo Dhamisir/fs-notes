@@ -79,6 +79,13 @@ export const topicContentBySlug = {
     ],
   },
   "time-complexity": {
+    links: [
+      {
+        label: "Time Complexity (TC)",
+        description: "Open the detailed Notion notes for deeper understanding.",
+        url: "https://anshu-fs-notes.notion.site/Time-Complexity-TC-39a4291ef87c801dafedfedc87e11741?pvs=74",
+      },
+    ],
     sections: [
       {
         title: "What is Time Complexity?",
