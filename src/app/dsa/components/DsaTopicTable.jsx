@@ -3,8 +3,57 @@
 import { useState } from "react";
 import { DsaTopicModal } from "@/app/dsa/components/DsaTopicModal";
 
-export function DsaTopicTable({ topics }) {
+export function DsaTopicTable({ topics, layout = "table" }) {
   const [selectedTopic, setSelectedTopic] = useState(null);
+
+  if (layout === "cards") {
+    return (
+      <>
+        <p className="mt-3 text-xs text-muted-foreground">
+          Click any phase card to open question notes
+        </p>
+        <div className="mt-3 grid gap-4 md:grid-cols-2">
+          {topics.map((topic, index) => (
+            <button
+              key={topic.slug}
+              type="button"
+              onClick={() => setSelectedTopic(topic)}
+              className={[
+                "group rounded-2xl border bg-white p-5 text-left shadow-sm transition",
+                "hover:-translate-y-0.5 hover:border-cyan-300 hover:shadow-md",
+                "focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2",
+              ].join(" ")}
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <span className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-700">
+                    Phase {index + 1}
+                  </span>
+                  <h3 className="mt-3 text-lg font-semibold tracking-tight text-slate-900">
+                    {topic.topic}
+                  </h3>
+                </div>
+                <span className="text-sm font-medium text-cyan-700 transition group-hover:translate-x-0.5">
+                  Open →
+                </span>
+              </div>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                {topic.concepts}
+              </p>
+              <p className="mt-3 text-sm font-medium text-slate-700">
+                {topic.problems}
+              </p>
+            </button>
+          ))}
+        </div>
+
+        <DsaTopicModal
+          topic={selectedTopic}
+          onClose={() => setSelectedTopic(null)}
+        />
+      </>
+    );
+  }
 
   return (
     <>
