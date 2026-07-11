@@ -26,6 +26,13 @@ export const module1Sections = [
         goal: "Understand optimization",
       },
       {
+        slug: "space-complexity",
+        topic: "Space Complexity",
+        concepts: "Auxiliary space, O(1), O(N), input vs extra memory",
+        problems: "Temp array, frequency map, recursion stack",
+        goal: "Understand memory usage",
+      },
+      {
         slug: "arrays-basics",
         topic: "Arrays Basics",
         concepts: "Traversal, insert/delete, frequency",
