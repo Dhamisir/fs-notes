@@ -599,6 +599,12 @@ export const topicContentBySlug = {
       },
       {
         title: "Pattern 5 – Binary Search",
+        links: [
+          {
+            label: "Open binary search notes",
+            url: "https://anshu-fs-notes.notion.site/Phase-2-Pattern-5-Binary-Search-39a4291ef87c80f482d4dd3999b3e582",
+          },
+        ],
         body: "Finally:",
         bullets: [
           "Binary Search",
