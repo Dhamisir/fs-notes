@@ -163,6 +163,68 @@ export const topicContentBySlug = {
       },
     ],
   },
+  "space-complexity": {
+    links: [
+      {
+        label: "Space Complexity (SC)",
+        description: "Open the detailed Notion notes for deeper understanding.",
+        url: "https://anshu-fs-notes.notion.site/Space-Complexity-SC-39a4291ef87c80b1a88ed92e376d4938?pvs=74",
+      },
+    ],
+    sections: [
+      {
+        title: "What is Space Complexity?",
+        body: "Space Complexity measures how much extra memory an algorithm uses as input size (N) grows. It focuses on additional memory created by your solution.",
+      },
+      {
+        title: "Input Space vs Auxiliary Space",
+        bullets: [
+          "Input space: memory already used to store the given input, like arr[n].",
+          "Auxiliary space: extra memory your algorithm creates, like temp arrays, hash maps, or recursion stack.",
+          "When we discuss Space Complexity in interviews, we usually focus on auxiliary space.",
+        ],
+      },
+      {
+        title: "Common Space Complexities",
+        table: {
+          headers: ["Complexity", "Meaning", "Example"],
+          rows: [
+            ["O(1)", "Constant extra memory", "Only variables like sum, max, count"],
+            ["O(N)", "Extra memory grows with N", "Temporary array or frequency map"],
+            ["O(N²)", "Extra grid or matrix", "DP table with N x N cells"],
+            ["O(log N)", "Recursive stack grows by halves", "Binary search recursion"],
+          ],
+        },
+      },
+      {
+        title: "O(1) Space Example",
+        code: "int sum = 0;\nfor(int i = 0; i < n; i++) {\n  sum += arr[i];\n}",
+        body: "Only one extra variable is used. Even if N grows, extra memory stays constant.",
+      },
+      {
+        title: "O(N) Space Example",
+        code: "vector<int> temp;\nfor(int i = 0; i < n; i++) {\n  temp.push_back(arr[i]);\n}",
+        body: "The temp vector grows with the input size, so auxiliary space is O(N).",
+      },
+      {
+        title: "Interview Quick Check",
+        bullets: [
+          "One variable for sum -> O(1) space",
+          "Extra array of size N -> O(N) space",
+          "Hash map storing frequencies of N values -> O(N) space",
+          "Recursive function depth N -> O(N) stack space",
+        ],
+      },
+      {
+        title: "Key Takeaways",
+        bullets: [
+          "Time Complexity tells how fast operations grow.",
+          "Space Complexity tells how extra memory grows.",
+          "Always ask: did I create extra arrays, maps, sets, or recursive calls?",
+        ],
+      },
+    ],
+  },
   "arrays-basics": {
     sections: [
       {
