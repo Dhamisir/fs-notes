@@ -552,6 +552,14 @@ export const topicContentBySlug = {
             label: "Open two pointer notes",
             url: "https://anshu-fs-notes.notion.site/Phase-2-Pattern-2-Two-Pointer-39a4291ef87c805c8c35f5df5843434f?pvs=73",
           },
+          {
+            label: "Opposite Direction Questions",
+            url: "https://anshu-fs-notes.notion.site/Two-Pointer-Category-Opposite-Direction-3b64291ef87c80628217c8334bccc3ec",
+          },
+          {
+            label: "Same Direction Questions",
+            url: "https://anshu-fs-notes.notion.site/Two-Pointer-category-Same-Direction-3b64291ef87c805dad3eee3451f5fe4b",
+          },
         ],
         body: "Now teach:",
         bullets: [
