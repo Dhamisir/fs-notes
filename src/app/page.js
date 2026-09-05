@@ -80,14 +80,18 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/project"
+            href="/assignments"
             className="rounded-xl border bg-card p-5 text-card-foreground shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           >
-            <div className="text-lg font-semibold tracking-tight">Projects</div>
-            <div className="mt-1 text-sm text-muted-foreground">
-              Frontend → Backend → Fullstack BRDs
+            <div className="text-lg font-semibold tracking-tight">
+              Assignments
             </div>
-            <div className="mt-3 text-sm text-muted-foreground">Open →</div>
+            <div className="mt-1 text-sm text-muted-foreground">
+              Download starter projects and complete the challenges
+            </div>
+            <div className="mt-3 text-sm text-muted-foreground">
+              View assignments →
+            </div>
           </Link>
 
           <Link

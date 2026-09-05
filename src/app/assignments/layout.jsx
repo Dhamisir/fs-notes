@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function ProjectLayout({ children }) {
+export default function AssignmentsLayout({ children }) {
   return (
     <div className="min-h-screen bg-[#f9fbfc]">
       <header className="border-b bg-background/80 backdrop-blur">
@@ -12,10 +12,10 @@ export default function ProjectLayout({ children }) {
             ← Home
           </Link>
           <Link
-            href="/project"
+            href="/assignments"
             className="text-sm text-muted-foreground hover:text-foreground"
           >
-            Project BRDs
+            Assignments
           </Link>
         </div>
       </header>
@@ -23,4 +23,3 @@ export default function ProjectLayout({ children }) {
     </div>
   );
 }
-
