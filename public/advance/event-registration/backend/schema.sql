@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS event_registration;
+
+USE event_registration;
+
+CREATE TABLE IF NOT EXISTS registrations (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL,
+  age INT NOT NULL,
+  event_name VARCHAR(150) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
