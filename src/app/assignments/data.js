@@ -99,4 +99,14 @@ export const starterAssignments = [
     learn: "Database Search Performance",
     download: "/advance/download/product-search.zip",
   },
+  {
+    number: "11",
+    slug: "movie-seat-booking-system",
+    title: "Movie Seat Booking System",
+    description:
+      "Make sure two customers can never both end up with the same seat when they book at the same time.",
+    stack: "React · Node.js · Express · MySQL",
+    learn: "Data Consistency Under Concurrent Requests",
+    download: "/advance/download/movie-seat-booking-system.zip",
+  },
 ];

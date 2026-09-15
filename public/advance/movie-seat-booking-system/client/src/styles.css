@@ -1,0 +1,31 @@
+:root { color: #20252b; background: #f5f6f8; font-family: Inter, Arial, sans-serif; }
+* { box-sizing: border-box; } body { min-width: 320px; min-height: 100vh; margin: 0; }
+.page { width: min(760px, calc(100% - 32px)); margin: 0 auto; padding: 62px 0; }
+.pageHeader h1 { margin: 5px 0 9px; font-size: clamp(2.4rem, 6vw, 4rem); }
+.pageHeader p { margin: 0; color: #68727c; }
+.eyebrow { color: #d05d2d !important; font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+
+.showInfo { margin-top: 32px; padding: 20px 24px; border: 1px solid #e0e3e7; border-radius: 14px; background: white; }
+.showInfo h2 { margin: 0 0 4px; }
+.showInfo p { margin: 0; color: #68727c; }
+
+.userPicker { display: flex; align-items: center; gap: 10px; margin: 20px 0; }
+.userPicker label { color: #68727c; font-size: .85rem; }
+.userPicker select { padding: 8px 12px; border: 1px solid #dfe2e6; border-radius: 8px; background: white; font-size: .9rem; }
+
+.seatMap { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 28px 0; }
+.seat { padding: 18px 0; border: 1px solid #dfe2e6; border-radius: 10px; background: white; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all .12s ease; }
+.seat.available:hover { border-color: #d05d2d; color: #d05d2d; }
+.seat.selected { border-color: #d05d2d; background: #d05d2d; color: white; }
+.seat.booked { border-color: #e0e3e7; background: #eceef0; color: #a7afb6; cursor: not-allowed; }
+
+.bookingBar { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 24px; }
+.bookingBar button { padding: 12px 22px; border: none; border-radius: 10px; background: #d05d2d; color: white; font-size: .95rem; font-weight: 700; cursor: pointer; }
+.bookingBar button:disabled { background: #dfe2e6; color: #a7afb6; cursor: not-allowed; }
+
+.statusMessage { margin: 0; padding: 10px 16px; border-radius: 8px; font-size: .88rem; }
+.statusMessage.success { background: #e7f6ec; color: #1e7b3c; }
+.statusMessage.error { background: #fdecea; color: #b3261e; }
+.statusMessage.pending { background: #fff4e5; color: #9a5b00; }
+
+@media (max-width: 480px) { .seatMap { grid-template-columns: repeat(3, 1fr); } }

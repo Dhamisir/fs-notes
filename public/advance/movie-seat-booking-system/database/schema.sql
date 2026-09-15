@@ -1,0 +1,43 @@
+CREATE DATABASE IF NOT EXISTS movie_seat_booking;
+
+USE movie_seat_booking;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS movies (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(150) NOT NULL,
+  duration_minutes INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS shows (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  movie_id INT NOT NULL,
+  screen_name VARCHAR(50) NOT NULL,
+  show_time DATETIME NOT NULL,
+  FOREIGN KEY (movie_id) REFERENCES movies(id)
+);
+
+CREATE TABLE IF NOT EXISTS seats (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  show_id INT NOT NULL,
+  seat_label VARCHAR(10) NOT NULL,
+  status ENUM('AVAILABLE', 'BOOKED') NOT NULL DEFAULT 'AVAILABLE',
+  FOREIGN KEY (show_id) REFERENCES shows(id),
+  UNIQUE KEY unique_seat_per_show (show_id, seat_label)
+);
+
+CREATE TABLE IF NOT EXISTS bookings (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  show_id INT NOT NULL,
+  seat_id INT NOT NULL,
+  user_id INT NOT NULL,
+  booked_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (show_id) REFERENCES shows(id),
+  FOREIGN KEY (seat_id) REFERENCES seats(id),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
