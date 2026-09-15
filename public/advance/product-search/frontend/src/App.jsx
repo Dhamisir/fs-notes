@@ -24,16 +24,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (!term.trim()) {
-      setResults([]);
-      setDurationMs(null);
-      setMessage("");
-      return;
-    }
+    const trimmed = term.trim();
 
     const timeout = setTimeout(async () => {
       try {
-        const response = await fetch(`${backendUrl}/products/search?q=${encodeURIComponent(term)}`);
+        const response = await fetch(`${backendUrl}/products/search?q=${encodeURIComponent(trimmed)}`);
         const result = await response.json();
         if (!response.ok) throw new Error(result.message);
         setResults(result.results);
@@ -42,7 +37,7 @@ function App() {
       } catch (error) {
         setMessage(error.message);
       }
-    }, 300);
+    }, trimmed ? 300 : 0);
 
     return () => clearTimeout(timeout);
   }, [term]);

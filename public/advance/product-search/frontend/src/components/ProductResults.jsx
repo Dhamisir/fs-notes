@@ -5,6 +5,8 @@ function ProductResults({ products }) {
         <article className="resultCard" key={product.id}>
           <h2>{product.name}</h2>
           <p className="price">₹{Number(product.price).toLocaleString("en-IN")}</p>
+          <p className="categories">{product.categories || "Uncategorized"}</p>
+          <p className="unitsSold">{product.unitsSold} sold</p>
         </article>
       ))}
     </section>

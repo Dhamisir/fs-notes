@@ -22,17 +22,28 @@ app.get("/products/count", async (request, response) => {
 
 app.get("/products/search", async (request, response) => {
   const term = (request.query.q || "").trim();
-
-  if (!term) {
-    return response.json({ results: [], durationMs: 0 });
-  }
+  const whereClause = term ? "WHERE p.name LIKE ?" : "";
+  const params = term ? [`%${term}%`] : [];
 
   const startedAt = Date.now();
 
   try {
     const [results] = await database.query(
-      "SELECT id, name, price FROM products WHERE name LIKE ? ORDER BY id LIMIT 50",
-      [`%${term}%`],
+      `SELECT
+         p.id,
+         p.name,
+         p.price,
+         GROUP_CONCAT(DISTINCT c.name ORDER BY c.name SEPARATOR ', ') AS categories,
+         COALESCE(SUM(oi.quantity), 0) AS unitsSold
+       FROM products p
+       LEFT JOIN product_categories pc ON pc.product_id = p.id
+       LEFT JOIN categories c ON c.id = pc.category_id
+       LEFT JOIN order_items oi ON oi.product_id = p.id
+       ${whereClause}
+       GROUP BY p.id, p.name, p.price
+       ORDER BY p.id
+       LIMIT 50`,
+      params,
     );
     const durationMs = Date.now() - startedAt;
     response.json({ results, durationMs });
