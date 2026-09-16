@@ -52,8 +52,10 @@ export default function RootLayout({ children }) {
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-12H3BP8ZFR');
+            if (window.location.hostname === "fs-notes.netlify.app") {
+              gtag('js', new Date());
+              gtag('config', 'G-12H3BP8ZFR');
+            }
           `}
         </Script>
       </body>
