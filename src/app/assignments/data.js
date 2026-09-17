@@ -6,6 +6,7 @@ export const starterAssignments = [
     description:
       "Connect a React frontend to book data provided by a Node.js server.",
     stack: "React · Node.js · Express",
+    category: "fullstack",
     learn: "Client–Server Communication / REST API",
     download: "/advance/download/mini-book-list.zip",
   },
@@ -16,6 +17,7 @@ export const starterAssignments = [
     description:
       "Make student registrations remain available after the server restarts.",
     stack: "React · Node.js · Express · MySQL",
+    category: "fullstack",
     learn: "MySQL & Database Persistence",
     download: "/advance/download/student-registration.zip",
   },
@@ -26,6 +28,7 @@ export const starterAssignments = [
     description:
       "Store student account information without saving the original password.",
     stack: "React · Node.js · Express · MySQL",
+    category: "fullstack",
     learn: "Password Hashing",
     download: "/advance/download/secure-student-registration.zip",
   },
@@ -36,6 +39,7 @@ export const starterAssignments = [
     description:
       "Let the backend identify which student is requesting their profile.",
     stack: "React · Node.js · Express · MySQL",
+    category: "fullstack",
     learn: "Authentication / JWT",
     download: "/advance/download/logged-in-user.zip",
   },
@@ -46,6 +50,7 @@ export const starterAssignments = [
     description:
       "Return only the private notes belonging to the user making the request.",
     stack: "React · Node.js · Express · MySQL",
+    category: "fullstack",
     learn: "Resource Authorization / Ownership",
     download: "/advance/download/private-notes.zip",
   },
@@ -56,6 +61,7 @@ export const starterAssignments = [
     description:
       "Enforce different product access rules for Admin and Normal User accounts.",
     stack: "React · Node.js · Express · MySQL",
+    category: "fullstack",
     learn: "RBAC / Role-Based Authorization",
     download: "/advance/download/product-manager.zip",
   },
@@ -66,6 +72,7 @@ export const starterAssignments = [
     description:
       "Make sure incoming registration data is correct before it is stored.",
     stack: "React · Node.js · Express · MySQL",
+    category: "fullstack",
     learn: "Backend Validation",
     download: "/advance/download/event-registration.zip",
   },
@@ -76,6 +83,7 @@ export const starterAssignments = [
     description:
       "Replace repeated failure-handling code with one maintainable approach.",
     stack: "React · Node.js · Express · MySQL",
+    category: "fullstack",
     learn: "Centralized Error Handling",
     download: "/advance/download/bank-account-api.zip",
   },
@@ -86,6 +94,7 @@ export const starterAssignments = [
     description:
       "Return complete order details from separately stored customer, product, and order data.",
     stack: "React · Node.js · Express · MySQL",
+    category: "fullstack",
     learn: "SQL JOINs & Relationships",
     download: "/advance/download/online-store-orders.zip",
   },
@@ -96,6 +105,7 @@ export const starterAssignments = [
     description:
       "Make product name search stay fast across a very large catalog.",
     stack: "React · Node.js · Express · MySQL",
+    category: "fullstack",
     learn: "Database Search Performance",
     download: "/advance/download/product-search.zip",
   },
@@ -106,7 +116,63 @@ export const starterAssignments = [
     description:
       "Make sure two customers can never both end up with the same seat when they book at the same time.",
     stack: "React · Node.js · Express · MySQL",
+    category: "fullstack",
     learn: "Data Consistency Under Concurrent Requests",
     download: "/advance/download/movie-seat-booking-system.zip",
+  },
+  {
+    number: "12",
+    slug: "admin-dashboard",
+    title: "Admin Dashboard",
+    description:
+      "Fix a small admin dashboard where the same UI keeps getting copy-pasted every time it needs to change.",
+    stack: "React",
+    category: "frontend",
+    learn: "Maintainable UI Structure",
+    download: "/advance/download/admin-dashboard.zip",
+  },
+  {
+    number: "13",
+    slug: "status-dashboard",
+    title: "Status Dashboard",
+    description:
+      "Fix a small ops dashboard whose panels each reimplement the same loading, error, and retry logic.",
+    stack: "React",
+    category: "frontend",
+    learn: "Reusable Stateful Behavior",
+    download: "/advance/download/status-dashboard.zip",
+  },
+  {
+    number: "14",
+    slug: "mini-storefront",
+    title: "Mini Storefront",
+    description:
+      "Untangle a shopping cart app where unrelated components have to forward cart data they never use.",
+    stack: "React",
+    category: "frontend",
+    learn: "Shared Application State",
+    download: "/advance/download/mini-storefront.zip",
+  },
+  {
+    number: "15",
+    slug: "customer-dashboard",
+    title: "Customer Dashboard",
+    description:
+      "Fix a customer dashboard that gives users no useful feedback while loading, on failure, or when there's nothing to show.",
+    stack: "React · Node.js · Express",
+    category: "fullstack",
+    learn: "Server Data Handling",
+    download: "/advance/download/customer-dashboard.zip",
+  },
+  {
+    number: "16",
+    slug: "product-dashboard",
+    title: "Product Dashboard",
+    description:
+      "Speed up a product dashboard that redoes expensive work every time something on the page changes — even when nothing relevant did.",
+    stack: "React",
+    category: "frontend",
+    learn: "Efficient Rendering",
+    download: "/advance/download/product-dashboard.zip",
   },
 ];

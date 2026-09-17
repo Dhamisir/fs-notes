@@ -60,7 +60,14 @@ export default async function AssignmentDetailPage({ params }) {
   const assignment = getAssignment(slug);
   if (!assignment) notFound();
 
-  const readmePath = path.join(process.cwd(), "public", "advance", assignment.slug, "README.md");
+  const readmePath = path.join(
+    process.cwd(),
+    "public",
+    "advance",
+    assignment.category,
+    assignment.slug,
+    "README.md",
+  );
   const readme = fs.readFileSync(readmePath, "utf8");
 
   return (

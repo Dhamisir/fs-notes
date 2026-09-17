@@ -1,0 +1,160 @@
+:root {
+  color: #1f2933;
+  background: #f4f6f8;
+  font-family: Inter, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.page {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0 56px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pageHeader h1 {
+  margin: 4px 0 0;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+}
+
+.eyebrow {
+  margin: 0;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sessionTimer {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.insightsPanel {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgb(15 23 42 / 5%);
+}
+
+@media (max-width: 720px) {
+  .insightsPanel {
+    grid-template-columns: 1fr;
+  }
+}
+
+.insightsPanel-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 14px;
+}
+
+.statLabel {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.statValue {
+  margin: 4px 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.insightsPanel-top {
+  padding-left: 20px;
+  border-left: 1px solid #e2e8f0;
+}
+
+.insightsPanel-top ol {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.insightsPanel-top li {
+  margin-bottom: 4px;
+}
+
+.emptyMessage {
+  padding: 28px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 14px;
+  color: #64748b;
+  text-align: center;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.productCard {
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.productCard-name {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.productCard-category {
+  margin: 4px 0;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.productCard-price {
+  margin: 0;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.productCard-stock {
+  margin: 4px 0 0;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
