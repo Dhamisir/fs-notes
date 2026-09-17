@@ -175,4 +175,15 @@ export const starterAssignments = [
     learn: "Efficient Rendering",
     download: "/advance/download/product-dashboard.zip",
   },
+  {
+    number: "17",
+    slug: "support-ticket-dashboard",
+    title: "Support Ticket Dashboard",
+    description:
+      "Fix a support ticket dashboard that gets stuck loading forever on failure and goes silently blank when there's nothing to show.",
+    stack: "React · Node.js · Express",
+    category: "fullstack",
+    learn: "Server Data Handling",
+    download: "/advance/download/support-ticket-dashboard.zip",
+  },
 ];
