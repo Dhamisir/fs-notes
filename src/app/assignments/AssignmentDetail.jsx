@@ -34,7 +34,7 @@ export default function AssignmentDetail({ assignment, area, technology, topic }
         <p className="mt-1 text-xs font-medium text-[#517481]">{assignment.stack}</p>
         <p className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-[#fff4e5] px-3 py-1 text-xs font-semibold text-[#9a5b13]">🎓 You&apos;ll learn: {assignment.learn}</p>
       </div></div>
-      <DownloadButton href={assignment.download} assignmentTitle={assignment.title} assignmentNumber={assignment.number} className="inline-flex shrink-0 items-center justify-center rounded-lg bg-[#0174af] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#005f91]">Download ZIP ↓</DownloadButton>
+      {assignment.download ? <DownloadButton href={assignment.download} assignmentTitle={assignment.title} assignmentNumber={assignment.number} className="inline-flex shrink-0 items-center justify-center rounded-lg bg-[#0174af] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#005f91]">Download ZIP ↓</DownloadButton> : null}
     </div>
     <article className="rounded-xl border bg-white p-6 shadow-sm"><ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{readme}</ReactMarkdown></article>
   </div>;

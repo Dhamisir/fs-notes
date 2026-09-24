@@ -246,6 +246,18 @@ export const starterAssignments = [
     learn: "Redis Fundamentals and Application Performance",
     download: "/advance/download/product-api-performance.zip",
   },
+  {
+    number: "20",
+    slug: "food-delivery-platform",
+    title: "Food Delivery Platform",
+    description:
+      "Build a complete food delivery platform where customers can discover restaurants, order food, and track deliveries while restaurant owners manage menus and incoming orders.",
+    stack: "React · Node.js · Express · MySQL",
+    area: "full-stack",
+    technology: "react-node-mysql",
+    topic: "capstone-projects",
+    learn: "Full-Stack Application Design",
+  },
 ];
 
 
@@ -301,6 +313,19 @@ export const assignmentCatalog = [
         { level: "advanced", slug: "relationships-and-joins", title: "Relationships and JOINs" },
         { level: "advanced", slug: "query-optimization", title: "Indexes and Query Optimization" },
         { level: "advanced", slug: "transactions-and-concurrency", title: "Transactions and Concurrency" },
+      ],
+    }],
+  },
+  {
+    slug: "full-stack",
+    title: "Full Stack",
+    description: "Combine frontend, backend, and database skills in complete applications.",
+    technologies: [{
+      slug: "react-node-mysql",
+      title: "React + Node.js + MySQL",
+      description: "Build complete applications with React, Express APIs, and MySQL persistence.",
+      topics: [
+        { level: "advanced", slug: "capstone-projects", title: "Capstone Projects" },
       ],
     }],
   },
