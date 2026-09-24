@@ -6,7 +6,6 @@ export const starterAssignments = [
     description:
       "Connect a React frontend to book data provided by a Node.js server.",
     stack: "React · Node.js · Express",
-    category: "fullstack",
     area: "backend",
     technology: "nodejs",
     topic: "rest-api-fundamentals",
@@ -20,7 +19,6 @@ export const starterAssignments = [
     description:
       "Make student registrations remain available after the server restarts.",
     stack: "React · Node.js · Express · MySQL",
-    category: "fullstack",
     area: "database",
     technology: "mysql",
     topic: "mysql-persistence",
@@ -34,7 +32,6 @@ export const starterAssignments = [
     description:
       "Store student account information without saving the original password.",
     stack: "React · Node.js · Express · MySQL",
-    category: "fullstack",
     area: "backend",
     technology: "nodejs",
     topic: "password-security",
@@ -48,7 +45,6 @@ export const starterAssignments = [
     description:
       "Let the backend identify which student is requesting their profile.",
     stack: "React · Node.js · Express · MySQL",
-    category: "fullstack",
     area: "backend",
     technology: "nodejs",
     topic: "authentication",
@@ -62,7 +58,6 @@ export const starterAssignments = [
     description:
       "Return only the private notes belonging to the user making the request.",
     stack: "React · Node.js · Express · MySQL",
-    category: "fullstack",
     area: "backend",
     technology: "nodejs",
     topic: "resource-authorization",
@@ -76,7 +71,6 @@ export const starterAssignments = [
     description:
       "Enforce different product access rules for Admin and Normal User accounts.",
     stack: "React · Node.js · Express · MySQL",
-    category: "fullstack",
     area: "backend",
     technology: "nodejs",
     topic: "role-based-authorization",
@@ -90,7 +84,6 @@ export const starterAssignments = [
     description:
       "Make sure incoming registration data is correct before it is stored.",
     stack: "React · Node.js · Express · MySQL",
-    category: "fullstack",
     area: "backend",
     technology: "nodejs",
     topic: "request-validation",
@@ -104,7 +97,6 @@ export const starterAssignments = [
     description:
       "Replace repeated failure-handling code with one maintainable approach.",
     stack: "React · Node.js · Express · MySQL",
-    category: "fullstack",
     area: "backend",
     technology: "nodejs",
     topic: "centralized-error-handling",
@@ -118,7 +110,6 @@ export const starterAssignments = [
     description:
       "Return complete order details from separately stored customer, product, and order data.",
     stack: "React · Node.js · Express · MySQL",
-    category: "fullstack",
     area: "database",
     technology: "mysql",
     topic: "relationships-and-joins",
@@ -132,7 +123,6 @@ export const starterAssignments = [
     description:
       "Make product name search stay fast across a very large catalog.",
     stack: "React · Node.js · Express · MySQL",
-    category: "fullstack",
     area: "database",
     technology: "mysql",
     topic: "query-optimization",
@@ -146,7 +136,6 @@ export const starterAssignments = [
     description:
       "Make sure two customers can never both end up with the same seat when they book at the same time.",
     stack: "React · Node.js · Express · MySQL",
-    category: "fullstack",
     area: "database",
     technology: "mysql",
     topic: "transactions-and-concurrency",
@@ -160,7 +149,6 @@ export const starterAssignments = [
     description:
       "Fix a small admin dashboard where the same UI keeps getting copy-pasted every time it needs to change.",
     stack: "React",
-    category: "frontend",
     area: "frontend",
     technology: "react",
     topic: "component-architecture",
@@ -174,7 +162,6 @@ export const starterAssignments = [
     description:
       "Fix a small ops dashboard whose panels each reimplement the same loading, error, and retry logic.",
     stack: "React",
-    category: "frontend",
     area: "frontend",
     technology: "react",
     topic: "custom-hooks",
@@ -188,7 +175,6 @@ export const starterAssignments = [
     description:
       "Untangle a shopping cart app where unrelated components have to forward cart data they never use.",
     stack: "React",
-    category: "frontend",
     area: "frontend",
     technology: "react",
     topic: "state-management",
@@ -202,7 +188,6 @@ export const starterAssignments = [
     description:
       "Fix a customer dashboard that gives users no useful feedback while loading, on failure, or when there's nothing to show.",
     stack: "React · Node.js · Express",
-    category: "fullstack",
     area: "frontend",
     technology: "react",
     topic: "api-fetching-and-ui-states",
@@ -216,7 +201,6 @@ export const starterAssignments = [
     description:
       "Speed up a product dashboard that redoes expensive work every time something on the page changes — even when nothing relevant did.",
     stack: "React",
-    category: "frontend",
     area: "frontend",
     technology: "react",
     topic: "performance-optimization",
@@ -230,7 +214,6 @@ export const starterAssignments = [
     description:
       "Fix a support ticket dashboard that gets stuck loading forever on failure and goes silently blank when there's nothing to show.",
     stack: "React · Node.js · Express",
-    category: "fullstack",
     area: "frontend",
     technology: "react",
     topic: "api-fetching-and-ui-states",
@@ -243,13 +226,25 @@ export const starterAssignments = [
     title: "Public Product Search API",
     description:
       "Protect a public search API when one client sends an unreasonable number of requests in a short period.",
-    stack: "Node.js · Express",
-    category: "fullstack",
+    stack: "Node.js · Express · MySQL",
     area: "backend",
     technology: "nodejs",
     topic: "api-protection",
     learn: "Protecting Public API Resources",
     download: "/advance/download/api-protection.zip",
+  },
+  {
+    number: "19",
+    slug: "product-api-performance",
+    title: "Redis in a Real Application",
+    description:
+      "Stop a popular catalog endpoint from repeating the same expensive database work when its data has not changed.",
+    stack: "React · Node.js · Express · MySQL · Redis",
+    area: "backend",
+    technology: "nodejs",
+    topic: "product-api-performance",
+    learn: "Redis Fundamentals and Application Performance",
+    download: "/advance/download/product-api-performance.zip",
   },
 ];
 
@@ -289,6 +284,7 @@ export const assignmentCatalog = [
         { level: "advanced", slug: "request-validation", title: "Request Validation" },
         { level: "advanced", slug: "centralized-error-handling", title: "Centralized Error Handling" },
         { level: "advanced", slug: "api-protection", title: "API Protection" },
+        { level: "advanced", slug: "product-api-performance", title: "Redis Fundamentals and Performance" },
       ],
     }],
   },

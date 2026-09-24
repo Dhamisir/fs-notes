@@ -20,7 +20,7 @@ const markdownComponents = {
 };
 
 export default function AssignmentDetail({ assignment, area, technology, topic }) {
-  const readme = fs.readFileSync(path.join(process.cwd(), "public", "advance", assignment.category, assignment.slug, "README.md"), "utf8");
+  const readme = fs.readFileSync(path.join(process.cwd(), "public", "advance", assignment.area, assignment.slug, "README.md"), "utf8");
   const topicPath = `/assignments/${area.slug}/${technology.slug}/${topic.slug}`;
   return <div className="mx-auto flex max-w-3xl flex-col gap-8">
     <nav className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
