@@ -237,6 +237,20 @@ export const starterAssignments = [
     learn: "Server Data Handling",
     download: "/advance/download/support-ticket-dashboard.zip",
   },
+  {
+    number: "18",
+    slug: "api-protection",
+    title: "Public Product Search API",
+    description:
+      "Protect a public search API when one client sends an unreasonable number of requests in a short period.",
+    stack: "Node.js · Express",
+    category: "fullstack",
+    area: "backend",
+    technology: "nodejs",
+    topic: "api-protection",
+    learn: "Protecting Public API Resources",
+    download: "/advance/download/api-protection.zip",
+  },
 ];
 
 
@@ -274,6 +288,7 @@ export const assignmentCatalog = [
         { level: "advanced", slug: "role-based-authorization", title: "Role-Based Authorization" },
         { level: "advanced", slug: "request-validation", title: "Request Validation" },
         { level: "advanced", slug: "centralized-error-handling", title: "Centralized Error Handling" },
+        { level: "advanced", slug: "api-protection", title: "API Protection" },
       ],
     }],
   },

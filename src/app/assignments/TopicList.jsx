@@ -22,7 +22,7 @@ export default function TopicList({ area, technology, assignments, activeTopic }
         const isOpen = activeTopic === topic.slug;
         return <section key={topic.slug} className={`relative border-l-2 pb-8 pl-8 last:pb-0 ${isOpen ? "border-[#0174af]" : "border-[#dce8ed]"}`}>
           <span className={`absolute -left-[1.05rem] top-0 flex size-8 items-center justify-center rounded-full border-2 bg-[#f9fbfc] text-[11px] font-bold ${isOpen ? "border-[#0174af] text-[#0174af]" : "border-[#c5d8e0] text-[#6f8791]"}`}>{String(index + 1).padStart(2, "0")}</span>
-          <Link href={isOpen ? basePath : `${basePath}/${topic.slug}`} aria-current={isOpen ? "page" : undefined} className={`group flex items-start justify-between gap-4 rounded-lg px-4 py-3 outline-none transition focus-visible:ring-2 focus-visible:ring-[#0174af] ${isOpen ? "bg-[#eaf7fc]" : "hover:bg-[#f2f8fa]"}`}>
+          <Link href={isOpen ? basePath : `${basePath}/${topic.slug}`} scroll={false} aria-current={isOpen ? "page" : undefined} className={`group flex items-start justify-between gap-4 rounded-lg px-4 py-3 outline-none transition focus-visible:ring-2 focus-visible:ring-[#0174af] ${isOpen ? "bg-[#eaf7fc]" : "hover:bg-[#f2f8fa]"}`}>
             <div>
               <h3 className="font-semibold text-[#195568]">{topic.title}</h3>
               <p className="mt-0.5 text-xs text-muted-foreground">{items.length} {items.length === 1 ? "assignment" : "assignments"}</p>

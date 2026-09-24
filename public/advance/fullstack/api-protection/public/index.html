@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Product Search</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Public API demo</p>
+      <h1>Product Search</h1>
+      <p class="intro">Search a public catalog, then inspect how the API behaves when one client calls it repeatedly.</p>
+      <form id="search-form">
+        <label for="query">Product name</label>
+        <div class="controls">
+          <input id="query" value="wireless" autocomplete="off" />
+          <button type="submit">Search</button>
+        </div>
+      </form>
+      <div class="actions">
+        <button id="repeat" class="secondary" type="button">Run repeated requests</button>
+        <span id="status" aria-live="polite">Ready</span>
+      </div>
+      <dl class="metrics">
+        <div><dt>Last response</dt><dd id="response-code">—</dd></div>
+        <div><dt>Requests completed</dt><dd id="completed">0</dd></div>
+        <div><dt>Server searches processed</dt><dd id="processed">0</dd></div>
+      </dl>
+      <section>
+        <h2>Results</h2>
+        <div id="results" class="results"></div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
